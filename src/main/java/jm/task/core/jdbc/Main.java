@@ -8,7 +8,9 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+
         UserServiceImpl usi = new UserServiceImpl();
+
 //        Создание таблицы User(ов)
         usi.createUsersTable();
 //        Добавление 4 User(ов) в таблицу с данными на свой выбор.

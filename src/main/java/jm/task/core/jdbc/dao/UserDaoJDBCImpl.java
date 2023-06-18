@@ -11,7 +11,7 @@ public class UserDaoJDBCImpl implements UserDao {
     public UserDaoJDBCImpl() {
     }
 
-    private static final Connection CONNECTION = Util.connectToMySqlDatabase();
+    private static final Connection CONNECTION = Util.connectToMySqlDatabaseJDBC();
 
     public void createUsersTable() {
         String sql = "CREATE TABLE IF NOT EXISTS Users ("

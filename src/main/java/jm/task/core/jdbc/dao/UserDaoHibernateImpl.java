@@ -1,10 +1,15 @@
 package jm.task.core.jdbc.dao;
 
 import jm.task.core.jdbc.model.User;
+import jm.task.core.jdbc.util.Util;
+import org.hibernate.Session;
 
 import java.util.List;
 
 public class UserDaoHibernateImpl implements UserDao {
+
+    private final Session session = Util.connectToMySqlDatabaseHibernate().openSession();
+
     public UserDaoHibernateImpl() {
 
     }

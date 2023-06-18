@@ -17,7 +17,7 @@ public class Util {
     private static final String LOCALHOST_DB_URL = "jdbc:mysql://localhost:3306/kata";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "root";
-    private static final String MYSQL_DIALECT = "org.hibernate.dialect.MySQLDialect";
+    private static final String MYSQL5_DIALECT = "org.hibernate.dialect.MySQL5Dialect";
 
     private static Connection connection;
     private static SessionFactory sessionFactory;
@@ -40,7 +40,7 @@ public class Util {
             settings.put(Environment.URL, LOCALHOST_DB_URL);
             settings.put(Environment.USER, USERNAME);
             settings.put(Environment.PASS, PASSWORD);
-            settings.put(Environment.DIALECT, MYSQL_DIALECT);
+            settings.put(Environment.DIALECT, MYSQL5_DIALECT);
             settings.put(Environment.SHOW_SQL, "true");
             settings.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
             configuration.setProperties(settings);
